@@ -2497,6 +2497,9 @@ body, html {
     position: relative;
     overflow: hidden;
   }
+  .portfolio .portfolio-box .portfolio-big-picture{
+    height: 400px;
+  }
   .portfolio .portfolio-box .portfolio-overlay {
     text-align: center;
     display: -ms-flexbox !important;
@@ -2735,7 +2738,7 @@ body, html {
     color: #EE802F;
   }
   .social-icons li:hover.social-icons-dribbble a, .social-icons.social-icons-colored li.social-icons-dribbble a {
-    color: #ea4c89;
+    color: #04669A;
   }
   .social-icons li:hover.social-icons-github a, .social-icons.social-icons-colored li.social-icons-github a {
     color: #333333;

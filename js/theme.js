@@ -314,7 +314,7 @@ form.on('submit', function (e) {
 			grecaptcha.execute(site_key, {action: 'contact'}).then(function (token) {
 				var gdata = form.serialize() + '&g-recaptcha-response=' + token;
 				$.ajax({
-					url: 'php/mail.php',  // form action url
+					url: 'https://formspree.io/f/mjvjgeyq',  // form action url
 					type: 'POST', 		  // form submit method get/post
 					dataType: 'json', 	  // request type html/json/xml
 					data: gdata, 		  // serialize form data
@@ -332,6 +332,7 @@ form.on('submit', function (e) {
 						submit.removeAttr("disabled", "disabled");
 						if (data.response == 'success') {
 							form.trigger('reset'); // reset form
+							window.location.replace("home");
 						}
 						setTimeout(function () {
 							$('.alert-dismissible').fadeOut('slow', function(){
@@ -347,7 +348,7 @@ form.on('submit', function (e) {
 		});
 	} else {
 		$.ajax({
-			url: 'php/mail.php', // form action url
+			url: 'https://formspree.io/f/mjvjgeyq', // form action url
 			type: 'POST', // form submit method get/post
 			dataType: 'json', // request type html/json/xml
 			data: form.serialize(), // serialize form data
@@ -365,6 +366,7 @@ form.on('submit', function (e) {
 				submit.removeAttr("disabled", "disabled");
 				if (data.response == 'success') {
 					form.trigger('reset'); // reset form
+					window.location.replace("home");
 				}
 				setTimeout(function () {
 					$('.alert-dismissible').fadeOut('slow', function(){
